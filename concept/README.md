@@ -1,2 +1,3 @@
-# fastcampus_algorithm
-패스트캠퍼스 온라인 강의 연습 코드입니다.
+# concept
+
+알고리즘 개념관련 문서와 코드입니다.
