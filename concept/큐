@@ -1,0 +1,27 @@
+2022-08-16
+
+Queue
+선입선출
+First Input Frist Out
+Last In Last Out
+
+head   tail
+insert delete
+
+Enqueue: 큐에 데이터 넣음
+Dequeue: 큐에 데이터 꺼냄
+
+파이썬: queue 라이브러리 활용
+    Queue(): 가장 일반적인 큐 자료구조
+    LifoQueue(): 나중에 입력된 데이터가 먼저 출력되는 구조(스택과 동일)
+    PriorityQueue(): 우선순위가 높은 순으로 데이터 출력
+
+어디에 많이 쓰이나?
+    운영체제에서 멀티 태스킹을 위한 프로세스 스케쥴링 방식을 구현하기 위해 많이 사용됨
+    *장단점 보다는 활용 예인 프로세스 스케쥴링 방식 이해하기
+
+============================
+운영체제 - 스케줄링
+참고 사이트
+https://hyunie-y.tistory.com/27
+
