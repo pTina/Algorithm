@@ -60,3 +60,70 @@
     ```
 
     <hr>
+
+- **2005.** 파스칼의 삼각형 230629
+    
+    ```python
+    // 1, 2 -> temp = [1], temp = [1,1]
+    // 이후 index -> result = [1,1]이 기본이고
+    // result에 뒤에서 두번째 값으로 temp[i] + temp[i+1] 값을 넣어줌
+    // 3 -> [1, 2, 1] => 값이 추가된 리스트를 temp에 다시 넣음
+    // 이것을 계속 반복함
+    
+    test = int(input())
+    for TEST in range(1, test+1):
+      T = int(input())
+      print('#{}'.format(TEST))
+      temp = [1]
+      result = []
+      for test_case in range(1, T + 1):
+        if test_case == 1:
+          result = [1]
+        elif test_case == 2:
+          temp.append(1)
+        else:
+          total = len(temp)
+          result = [1,1]
+          for i in range(0, total-1):
+            result.insert(-1, temp[i] + temp[i+1])
+          temp = result
+              
+        result = temp
+        print(' '.join(list(map(str, result))))
+    ```
+    
+- **1989.** 초심자의 회문 검사 2306629
+    
+    ```python
+    # 문자열의 길이가 짝수이면
+    # 문자열을 절반 잘라서 비교하기
+    # test[:mid], test[mid:][::-1]
+    
+    # 파이썬에서 문자열 뒤집기 string[::-1]
+    
+    # 문자열의 길이가 홀수이면
+    # 가운데 문자 빼고 절반 잘라서 비교하기
+    # test[:mid-1], test[mid:][::-1]
+    
+    # 가운데 인덱스 값은 math.ceil(문자열 길이/2)
+    import math
+    
+    T = int(input())
+    for test_case in range(1, T + 1):
+      result = 0
+      test = str(input())
+      mid = math.ceil(len(test)/2)
+      if len(test) % 2 != 0 :
+        str1 = test[:mid-1]
+      else:
+        str1 = test[:mid]
+    
+      str2 = test[mid:][::-1]
+      
+      if str1 == str2:
+        result = 1
+      
+      print('#{} {}'.format(test_case, result))
+    ```
+
+    <hr>
