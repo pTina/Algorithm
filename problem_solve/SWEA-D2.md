@@ -127,3 +127,32 @@
     ```
 
     <hr>
+
+- **1986.** 지그재그 숫자 230711
+    
+    ```python
+    T = int(input())
+    for test_case in range(1, T + 1):
+      result = 1
+      end = int(input())
+      for i in range(2, end+1):
+        if i%2 == 1:
+          result += i
+        else:
+          result += (i*-1)
+      print('#{} {}'.format(test_case, result))
+    ```
+    
+
+- **1984.** 중간 평균값 구하기 230711
+    
+    ```python
+    T = int(input())
+    for test_case in range(1, T + 1):
+        numbers = list(map(int, input().split()))
+        numbers.sort()
+        numbers.pop(0)
+        numbers.pop()
+        result = round(sum(numbers)/len(numbers))
+        print('#{} {}'.format(test_case, result))
+    ```
